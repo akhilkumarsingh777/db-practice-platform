@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DB Practice Platform</title>
+<style>
+  :root { --ink:#16302b; --bg:#f6f8f7; --card:#fff; --line:#d5dfdb; --brand:#0f766e; --ok:#15803d; --bad:#b91c1c; }
+  * { box-sizing: border-box; }
+  body { margin:0; font:16px/1.5 system-ui, sans-serif; color:var(--ink); background:var(--bg); }
+  header { display:flex; flex-wrap:wrap; gap:.75rem; align-items:center; justify-content:space-between;
+           padding:.75rem 1.25rem; background:var(--ink); color:#fff; }
+  header h1 { font-size:1.1rem; margin:0; }
+  nav button, .btn { font:inherit; border:1px solid var(--brand); background:var(--brand); color:#fff;
+           padding:.4rem .9rem; border-radius:6px; cursor:pointer; }
+  nav button.ghost, .btn.ghost { background:transparent; color:inherit; border-color:currentColor; }
+  nav button.active { background:#fff; color:var(--ink); border-color:#fff; }
+  main { max-width:860px; margin:0 auto; padding:1.25rem; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:8px; padding:1rem; margin-bottom:1rem; }
+  .card h3 { margin:.1rem 0 .25rem; }
+  .topic { font-size:.85rem; color:var(--brand); font-weight:600; }
+  textarea, input { width:100%; font:inherit; padding:.5rem; border:1px solid var(--line); border-radius:6px; }
+  textarea { font-family:ui-monospace, Menlo, monospace; min-height:80px; margin:.5rem 0; }
+  input { margin-bottom:.6rem; }
+  pre { background:#eef3f1; padding:.6rem; border-radius:6px; overflow-x:auto; }
+  .scroll { overflow-x:auto; }
+  table { border-collapse:collapse; margin-top:.5rem; font-size:.9rem; }
+  th, td { border:1px solid var(--line); padding:.25rem .6rem; text-align:left; }
+  th { background:#eef3f1; }
+  .ok { color:var(--ok); font-weight:600; margin:.5rem 0 0; }
+  .bad { color:var(--bad); font-weight:600; margin:.5rem 0 0; }
+  .opt { display:block; width:100%; text-align:left; margin:.3rem 0; padding:.5rem .7rem; font:inherit;
+         background:#fff; border:1px solid var(--line); border-radius:6px; cursor:pointer; }
+  .opt:hover { border-color:var(--brand); }
+  .bar { height:10px; background:#e2eae7; border-radius:5px; overflow:hidden; }
+  .bar span { display:block; height:100%; background:var(--brand); }
+  .row { display:flex; justify-content:space-between; font-size:.95rem; margin-top:.8rem; }
+  .tick { color:var(--ok); }
+  :focus-visible { outline:3px solid #f59e0b; outline-offset:2px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>DB Practice Platform</h1>
+  <nav id="nav"></nav>
+</header>
+<main id="app"></main>
+<script src="app.js"></script>
+</body>
+</html>

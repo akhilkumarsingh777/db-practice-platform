@@ -1,0 +1,20 @@
+module.exports = [
+  { id: 1, topic: 'SQL JOINs', q: 'What does a LEFT JOIN return?',
+    options: ['Only rows that match in both tables', 'All rows from the left table, with NULLs where the right has no match', 'All rows from the right table only', 'Every combination of rows'],
+    answer: 1, explain: 'LEFT JOIN keeps every row of the left table. Missing matches on the right show up as NULL.' },
+  { id: 2, topic: 'SQL Aggregation', q: 'Which clause filters groups after GROUP BY?',
+    options: ['WHERE', 'HAVING', 'ORDER BY', 'LIMIT'],
+    answer: 1, explain: 'WHERE filters rows before grouping. HAVING filters the groups produced by GROUP BY.' },
+  { id: 3, topic: 'Indexing', q: 'What is the main benefit of an index on a column?',
+    options: ['It reduces table size', 'It speeds up lookups and filters on that column', 'It makes INSERTs faster', 'It removes duplicate rows'],
+    answer: 1, explain: 'Indexes let the database find rows without scanning the whole table, at the cost of slower writes and extra storage.' },
+  { id: 4, topic: 'MongoDB Design', q: 'When is embedding a sub-document usually better than referencing?',
+    options: ['The child data is huge and grows without limit', 'The child data is small and always read with the parent', 'The child is shared by many parents', 'Never, always reference'],
+    answer: 1, explain: 'Embed small data that is read together with its parent (e.g. an order and its few items). Reference large, unbounded or shared data.' },
+  { id: 5, topic: 'MongoDB Aggregation', q: 'Which aggregation stage is closest to SQL GROUP BY?',
+    options: ['$match', '$project', '$group', '$sort'],
+    answer: 2, explain: '$group buckets documents by a key and computes values such as $sum or $avg, like GROUP BY with aggregate functions.' },
+  { id: 6, topic: 'Mongoose', q: 'What does a Mongoose schema do?',
+    options: ['Starts the MongoDB server', 'Defines the shape, types and validation of documents in a collection', 'Creates SQL tables', 'Encrypts the database'],
+    answer: 1, explain: 'A schema describes fields, types, defaults and validators. A model built from it is used to query the collection.' }
+];
